@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<br>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card card-body">
+            <h4>{{title}}</h4>
+            <hr>
+            <h6>For: {{ customer.name }}</h6>
+            <form method="POST" action="">
+                {% csrf_token %}
+                {{ form_set.management_form }}
+                {% for form in form_set %}
+                    {{ form }} <br>
+                {% endfor %}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
