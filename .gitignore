@@ -1,4 +1,4 @@
 .git
 env
-accounts/__pycache__
-crm/__pycache__
+/accounts/__pycache__
+/crm/__pycache__
